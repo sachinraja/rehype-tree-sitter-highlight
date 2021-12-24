@@ -51,7 +51,7 @@ Unknown languages are ignored by default. You can set `ignoreUnknownLanguage: fa
 
 ## Examples
 
-See [examples](https://github.com/sachinraja/rodemirror/tree/main/examples) for ways to use this plugin.
+See [examples](https://github.com/sachinraja/rehype-tree-sitter-highlight/tree/main/examples) for ways to use this plugin.
 
 ## Inspiration
 
