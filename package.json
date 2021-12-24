@@ -14,6 +14,12 @@
   "author": "Sachin Raja <sachinraja2349@gmail.com>",
   "license": "MIT",
   "main": "dist/index.cjs",
+  "keywords": [
+    "tree-sitter",
+    "tree-sitter-highlight",
+    "rehype",
+    "syntax-highlighter"
+  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {

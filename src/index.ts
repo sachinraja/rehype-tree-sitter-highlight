@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { toString } from 'hast-util-to-string'
 import treeSitter, { Language } from 'tree-sitter-highlight'
-import { Plugin } from 'unified'
+import { Transformer } from 'unified'
 import { visit } from 'unist-util-visit'
 
 export type RehypeTreeSitterHighlightOptions = {
@@ -28,10 +28,10 @@ const langMap = {
   'css': 4,
 } as Record<string, Language>
 
-/**
- * @see https://github.com/stefanprobst/rehype-shiki/blob/baf348eb800e8a1d64cba37c6ed586aa69ecfb41/src/index.js
- */
-const attacher: Plugin<[] | [RehypeTreeSitterHighlightOptions]> = (options = {}) => {
+const attacher = (options: RehypeTreeSitterHighlightOptions = {}): Transformer => {
+  /**
+   * @see https://github.com/stefanprobst/rehype-shiki/blob/baf348eb800e8a1d64cba37c6ed586aa69ecfb41/src/index.js
+   */
   const resolvedOptions = { ...defaultOptions, ...options }
 
   const transformer = (tree: any) => {
