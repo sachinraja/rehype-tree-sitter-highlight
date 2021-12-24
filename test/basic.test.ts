@@ -31,13 +31,26 @@ it('highlights basic javascript', async () => {
 </pre>
 <p>More text</p>`)
 
-  expect(vfile.toString()).toMatchInlineSnapshot()
+  expect(vfile.toString()).toMatchInlineSnapshot(`
+"<h1>Heading</h1>
+<p>Text</p>
+<pre class=\\"source\\">
+    <span class=\\"keyword\\">const</span> <span class=\\"variable\\">hello</span> <span class=\\"operator\\">=</span> <span class=\\"string\\">\\"World\\"</span><span class=\\"punctuation delimiter\\">;</span>
+  </pre>
+<p>More text</p>"`)
 })
 
 it('skips unknown language', async () => {
   const vfile = await processor.process(unknown)
 
-  expect(vfile.toString()).toMatchInlineSnapshot()
+  expect(vfile.toString()).toMatchInlineSnapshot(`
+"<h1>Heading</h1>
+<p>Text</p>
+<pre>  <code class=\\"unknown\\">
+    Hello!
+  </code>
+</pre>
+<p>More text</p>"`)
 })
 
 it('throws error on unknown', async () => {
