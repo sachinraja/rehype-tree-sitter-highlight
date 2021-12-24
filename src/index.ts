@@ -29,7 +29,7 @@ const langMap = {
 } as Record<string, Language>
 
 /**
- * Plugin that highlight syour code using [tree-sitter-highlight](https://github.com/devongovett/tree-sitter-highlight).
+ * Plugin that highlights your code using [tree-sitter-highlight](https://github.com/devongovett/tree-sitter-highlight).
  */
 const attacher = (options: RehypeTreeSitterHighlightOptions = {}): Transformer => {
   /**
