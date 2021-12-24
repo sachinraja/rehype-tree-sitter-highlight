@@ -28,6 +28,9 @@ const langMap = {
   'css': 4,
 } as Record<string, Language>
 
+/**
+ * Plugin that highlight syour code using [tree-sitter-highlight](https://github.com/devongovett/tree-sitter-highlight).
+ */
 const attacher = (options: RehypeTreeSitterHighlightOptions = {}): Transformer => {
   /**
    * @see https://github.com/stefanprobst/rehype-shiki/blob/baf348eb800e8a1d64cba37c6ed586aa69ecfb41/src/index.js
