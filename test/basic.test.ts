@@ -31,13 +31,13 @@ it('highlights basic javascript', async () => {
 </pre>
 <p>More text</p>`)
 
-  expect(vfile).toMatchInlineSnapshot()
+  expect(vfile.toString()).toMatchInlineSnapshot()
 })
 
 it('skips unknown language', async () => {
   const vfile = await processor.process(unknown)
 
-  expect(vfile).toMatchInlineSnapshot()
+  expect(vfile.toString()).toMatchInlineSnapshot()
 })
 
 it('throws error on unknown', async () => {
