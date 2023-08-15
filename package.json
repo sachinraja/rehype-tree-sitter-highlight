@@ -44,7 +44,7 @@
     "test": "vitest"
   },
   "peerDependencies": {
-    "unified": "^10"
+    "unified": "^10 || ^11.0.0"
   },
   "dependencies": {
     "hast-util-to-string": "^2.0.0",
